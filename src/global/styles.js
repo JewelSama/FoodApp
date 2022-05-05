@@ -1,3 +1,5 @@
+
+
 export const colors = {
     buttons: "#ff8c52",
     grey1: "#43484d",
@@ -42,7 +44,10 @@ export const title ={
     fontSize: 20,
     fontWeight: "bold",
 }
-
-
+// export const images = {
+//    food1: require('../../assets/images/food1.jpg'),
+//    food2: require('../../assets/images/food2.jpg'),
+//    food3: require('../../assets/images/food3.jpg'),
+// }
 
 
