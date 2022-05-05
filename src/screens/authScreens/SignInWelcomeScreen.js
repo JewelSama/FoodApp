@@ -4,11 +4,12 @@ import { colors, parameters, title } from '../../global/styles';
 import { Icon, Button, SocialIcon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
 import Swiper from "react-native-swiper";
+import SignInScreen from './SignInScreen';
 // import food1 from "../../../assets/images/food1.jpg";
 // import food2 from "";
 
 
-export default function SignInWelcomeScreen (){
+export default function SignInWelcomeScreen ({navigation}){
     return(
         <View style={{flex: 1,}}>
             <View style={{flex:3, justifyContent: "flex-start", alignItems: "center", paddingTop: 20}}>
@@ -52,6 +53,9 @@ export default function SignInWelcomeScreen (){
                     title="SIGN IN"
                     buttonStyle={parameters.styledButton}
                     titleStyle={parameters.buttonTitle}
+                    onPress={()=>{
+                        navigation.navigate("SignInScreen")
+                    }}
                 />
                 </View>
                 <View style={{marginHorizontal: 20, marginTop: 20}}>

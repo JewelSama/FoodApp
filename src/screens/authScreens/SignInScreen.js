@@ -5,7 +5,7 @@ import { colors, parameters, title } from '../../global/styles';
 import { Icon, Button, SocialIcon } from 'react-native-elements';
 import * as Animatable from 'react-native-animatable';
 
-export default function SignInScreen() {
+export default function SignInScreen({navigation}) {
 
     const [TextInput2Focussed, setTextInput2Focussed] = useState(false)
 
@@ -14,7 +14,7 @@ const TextInput2 = useRef(2)
 
   return (
     <View style={styles.container}>
-      <Header title="My Account" type="arrow-left" />
+      <Header title="My Account" type="arrow-left" navigation={navigation} />
     <View style={{marginLeft: 20, marginTop: 10}}>
         <Text style={title}>Sign In</Text>
     </View>
@@ -78,6 +78,9 @@ const TextInput2 = useRef(2)
                 title="SIGN IN"
                 buttonStyle={parameters.styledButton}
                 titleStyle={parameters.buttonTitle}
+                onPress={() =>{
+                    navigation.navigate("HomeScreen")
+                }}
             />
 
         </View>
